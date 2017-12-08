@@ -7,9 +7,11 @@
 ```
 import "github.com/jancajthaml-go/verhoeff"
 
-verhoeff.Validate("00123014764700968325")
+ok := verhoeff.Validate("00123014764700968325")
 
 digit, error := verhoeff.Digit("x")
+
+signed := verhoeff.Generate("1")
 ```
 
 ### Performance ###
