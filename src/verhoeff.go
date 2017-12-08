@@ -29,9 +29,9 @@ scan:
 		return 1, errors.New("string must contain only digits")
 	}
 
-	x = mult[x][perm[((i + 1) % 8)][d]]
-
 	i++
+	x = mult[x][perm[(i - (i/8)*8)][d]]
+
 	if i != l {
 		goto scan
 	}
@@ -54,7 +54,7 @@ scan:
 		return false
 	}
 
-	x = mult[x][perm[(i % 8)][d]]
+	x = mult[x][perm[(i - (i/8)*8)][d]]
 
 	i++
 	if i != l {
