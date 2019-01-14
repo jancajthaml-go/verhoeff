@@ -1,4 +1,4 @@
-## Performant and straight-forward implementation of verhoeff checksum algorithm
+## verhoeff checksum algorithm
 
 [![Go Report Card](https://goreportcard.com/badge/jancajthaml-go/verhoeff)](https://goreportcard.com/report/jancajthaml-go/verhoeff)
 
@@ -17,13 +17,13 @@ signed := verhoeff.Generate("1")
 ### Performance ###
 
 ```
-BenchmarkVerhoeffSmall-4            200000000     9.54 ns/op
-BenchmarkVerhoeffLarge-4            20000000      61.7 ns/op
-BenchmarkVerhoeffSmallParallel-4    300000000     4.60 ns/op
-BenchmarkVerhoeffLargeParallel-4    50000000      31.9 ns/op
+BenchmarkVerhoeffSmall-4          100000000  15.6 ns/op  0 B/op  0 allocs/op
+BenchmarkVerhoeffLarge-4          20000000   83.5 ns/op  0 B/op  0 allocs/op
+BenchmarkVerhoeffSmallParallel-4  200000000  6.43 ns/op  0 B/op  0 allocs/op
+BenchmarkVerhoeffLargeParallel-4  50000000   38.2 ns/op  0 B/op  0 allocs/op
 ```
 
-test on your own by running `make benchmark`
+verify your performance by running `make benchmark`
 
 ### Resources ###
 
