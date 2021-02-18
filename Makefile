@@ -7,4 +7,8 @@ test:
 
 .PHONY: benchmark
 benchmark:
-	@go test -v ./... -benchmem -bench=.
+	@GOMAXPROCS=1 go test -v ./... -run=nil -bench=. -benchmem -benchtime=10000x
+
+.PHONY: build
+build:
+	@go build -gcflags '-m -m' ./verhoeff.go
